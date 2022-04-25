@@ -1,0 +1,214 @@
+/* general styling */
+body {
+  background-color: hsl(180, 1%, 20%);
+}
+p, h1, h2, h3, h4, h5 {
+  color: rgba(255, 255, 255, 0.89);
+}
+p {
+  text-align: justify;
+  font-size: x-large
+}
+.footer p {
+  font-size: xx-small;
+}
+h1 {
+  font-size: 4vh;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+}
+h2 {
+  font-size: 3vh;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+}
+
+/* classes */
+.roadmap {
+  font-size: large;
+}
+.increase-spacing {
+  margin-top: 8vw;
+  margin-bottom: 8vw;
+}
+.increase-spacing-2 {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+.increase-spacing-3 {
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+}
+.banner {
+  background-image: url("img/banner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 40em;
+  background-position: center;
+}
+.buy-button-helper {
+  display: flex;
+  justify-content: center;
+}
+.buy-button img:hover {
+  animation: pulse 1.5s linear infinite;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+}
+.nft {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  height: 25vh;
+  max-height: 250px;
+}
+.shy-button {
+  background: none;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-size: large;
+  cursor: pointer;
+  outline: inherit;
+}
+.logo-reductor {
+  max-width: 300px;
+  min-width: 150px;
+}
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+  typing 2s steps(30, end),
+  blink-caret .5s step-end infinite;
+}
+/* the typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+/* the cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+.tip-button {
+  height: 89px;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-image: url('../img/metamask_button_off.png');
+  cursor: pointer;
+}
+.tip-button:hover {
+  background-image: url('../img/metamask_button_on.png');
+}
+.tip-button:active {
+  background-image: url('../img/metamask_button_off.png');
+}
+.github-button {
+  height: 89px;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-image: url('../img/github_button_off.png');
+cursor: pointer;
+}
+.github-button:hover {
+  background-image: url('../img/github_button_on.png');
+}
+.github-button:active {
+  background-image: url('../img/github_button_off.png');
+}
+.columnContainer {
+  width: 100%;
+  display: flex;
+}
+.leftColumn {
+  width: 50%;
+  padding: 10px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.rightColumn {
+  width: 50%;
+  padding: 10px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* media queries */
+@media only screen and (min-width: 768px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+  .logo-reductor {
+    max-width: 200px;
+    min-width: 200px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width:500px) {
+  p {
+  text-align: justify;
+  font-size: large
+  }
+}
+@media only screen and (max-width: 500px) and (min-width:450px) {
+  .banner {
+    background-image: url("img/banner.png");
+    background-size: cover;
+    background-position: 15%;
+    background-repeat: no-repeat;
+  }
+  p {
+  text-align: justify;
+  font-size: large
+  }
+  .roadmap {
+    font-size: medium;
+  }
+}
+@media only screen and (max-width:450px) {
+  .banner {
+    background-image: url("img/logo_banner.png");
+    height: 0.1vh;
+    background-repeat: no-repeat;
+  }
+  p {
+  text-align: justify;
+  font-size: medium
+  }
+  .roadmap {
+    font-size: small;
+  }
+}
+@media (max-width: 768px) {
+  .columnContainer {
+    flex-direction: column;
+  }
+  .leftColumn {
+    order: 1;
+    width: 70%;
+  }
+  .rightColumn {
+    order: 2;
+    width: 70%;
+  }
+}
+/* @media (min-width: 320px) and (max-width: 480px) { */
