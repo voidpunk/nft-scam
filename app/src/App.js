@@ -151,7 +151,7 @@ function App() {
 
   return (
     <div style={{
-      backgroundColor: 'white',
+      // backgroundColor: 'var(--primary)',
       borderRadius: 24
     }}>
       <s.Container
@@ -159,10 +159,9 @@ function App() {
         jc={"center"}
         ai={"center"}
         style={{
-          backgroundColor: "var(--accent)",
+          backgroundColor: "var(--secondary)",
           padding: 24,
           borderRadius: 24,
-          border: "4px dashed var(--secondary)",
           boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
         }}
       >
@@ -171,7 +170,7 @@ function App() {
             textAlign: "center",
             fontSize: 50,
             fontWeight: "bold",
-            color: "var(--accent-text)",
+            color: "var(--secondary-text)",
           }}
         >
           {data.totalSupply} / {CONFIG.MAX_SUPPLY}
@@ -179,10 +178,10 @@ function App() {
         <s.TextDescription
           style={{
             textAlign: "center",
-            color: "var(--primary-text)",
+            color: "var(--secondary-text)",
           }}
         >
-          <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
+          <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK} style={{color: "var(--accent-text)"}}>
             {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
           </StyledLink>
         </s.TextDescription>
@@ -190,12 +189,12 @@ function App() {
         {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
           <>
             <s.TextTitle
-              style={{ textAlign: "center", color: "var(--accent-text)" }}
+              style={{ textAlign: "center", color: "var(--secondary-text)" }}
             >
               The sale has ended.
             </s.TextTitle>
             <s.TextDescription
-              style={{ textAlign: "center", color: "var(--accent-text)" }}
+              style={{ textAlign: "center", color: "var(--secondary-text)" }}
             >
               You can still find {CONFIG.NFT_NAME} on
             </s.TextDescription>
@@ -207,14 +206,14 @@ function App() {
         ) : (
           <>
             <s.TextTitle
-              style={{ textAlign: "center", color: "var(--accent-text)" }}
+              style={{ textAlign: "center", color: "var(--secondary-text)" }}
             >
               1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
               {CONFIG.NETWORK.SYMBOL}.
             </s.TextTitle>
             <s.SpacerXSmall />
             <s.TextDescription
-              style={{ textAlign: "center", color: "var(--accent-text)" }}
+              style={{ textAlign: "center", color: "var(--secondary-text)" }}
             >
               Excluding gas fees.
             </s.TextDescription>
@@ -225,7 +224,7 @@ function App() {
                 <s.TextDescription
                   style={{
                     textAlign: "center",
-                    color: "var(--accent-text)",
+                    color: "var(--secondary-text)",
                   }}
                 >
                   Connect to the {CONFIG.NETWORK.NAME} network
@@ -246,7 +245,7 @@ function App() {
                     <s.TextDescription
                       style={{
                         textAlign: "center",
-                        color: "var(--accent-text)",
+                        color: "var(--secondary-text)",
                       }}
                     >
                       {blockchain.errorMsg}
@@ -259,7 +258,7 @@ function App() {
                 <s.TextDescription
                   style={{
                     textAlign: "center",
-                    color: "var(--accent-text)",
+                    color: "var(--secondary-text)",
                   }}
                 >
                   {feedback}
@@ -280,7 +279,7 @@ function App() {
                   <s.TextDescription
                     style={{
                       textAlign: "center",
-                      color: "var(--accent-text)",
+                      color: "var(--secondary-text)",
                     }}
                   >
                     {mintAmount}

@@ -1,9 +1,10 @@
 /* general styling */
 body {
-  background-color: hsl(180, 1%, 20%);
+  /* background-color: hsl(180, 1%, 20%); */
+  background-color: var(--primary);
 }
 p, h1, h2, h3, h4, h5 {
-  color: rgba(255, 255, 255, 0.89);
+  color: var(--primary-text);
 }
 p {
   text-align: justify;
@@ -15,14 +16,19 @@ p {
 h1 {
   font-size: 4vh;
   font-weight: bold;
-  color: #fff;
+  color: var(--primary-text);
   text-shadow: 0 0 10px #000;
 }
 h2 {
   font-size: 3vh;
   font-weight: bold;
-  color: #fff;
+  color: var(--primary-text);
   text-shadow: 0 0 10px #000;
+}
+
+nav {
+  background-color: var(--secondary);
+  color: var(--primary-text);
 }
 
 /* classes */
