@@ -83,6 +83,10 @@ img {
   cursor: pointer;
   outline: inherit;
 }
+.shy-button:hover {
+  color: #36ba90;
+}
+
 .logo-reductor {
   max-width: 300px;
   min-width: 150px;
