@@ -8,10 +8,10 @@ p, h1, h2, h3, h4, h5 {
 }
 p {
   text-align: justify;
-  font-size: x-large
+  font-size: large;
 }
-.footer p {
-  font-size: xx-small;
+footer p {
+  font-size: small;
 }
 h1 {
   font-size: 4vh;
@@ -39,7 +39,7 @@ nav {
 
 /* classes */
 .roadmap {
-  font-size: large;
+  font-size: medium;
 }
 .increase-spacing {
   margin-top: 8vw;
