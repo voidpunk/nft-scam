@@ -2,6 +2,28 @@
 $(".img-fluid").addClass("wow fadeIn z-depth-1-half");
 new WOW().init();
 
+// responsive hover for svg icons and logo
+let svgs = document.querySelectorAll('svg');
+let logo = document.getElementById('logo')
+svgs.forEach(element => {
+    element.addEventListener('mouseover', () => {
+      $(element).attr("fill", "#36ba90");
+  });
+});
+logo.addEventListener('mouseover', () => {
+  $(logo).attr('src', 'img/logo_hover.png');
+  }
+);
+svgs.forEach(element => {
+  element.addEventListener('mouseout', () => {
+    $(element).attr("fill", "white");
+  });
+});
+logo.addEventListener('mouseout', () => {
+  $(logo).attr('src', 'img/logo.png');
+  }
+);
+
 // metamask button
 const getWeb3 = async () => {
   return new Promise(async (resolve, reject) => {
@@ -16,7 +38,7 @@ const getWeb3 = async () => {
 }
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("tip-button").addEventListener("click", async () => {
-  const web3 = await getWeb3();
+    const web3 = await getWeb3();
   })
 })
 
@@ -72,9 +94,11 @@ const navLinks = document.querySelectorAll('.nav-item:not(.dropdown)');
 const menuToggle = document.getElementById('navbarSupportedContent');
 const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
 navLinks.forEach((l) => {
-    l.addEventListener('click', () => {
+  l.addEventListener('click', () => {
       if (menuToggle.classList.contains('show')) {
         bsCollapse.toggle();
       } 
     });
-});
+  });
+
+// let width = window.innerWidth;

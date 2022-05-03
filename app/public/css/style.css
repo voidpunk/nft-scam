@@ -31,6 +31,12 @@ nav {
   color: var(--primary-text);
 }
 
+#banner {
+  border-radius: 0% 50% 0% 50%;
+  /* border-radius: 10% 10% 10% 10%; */
+  box-shadow: -10px 10px 10px 5px;
+}
+
 /* classes */
 .roadmap {
   font-size: large;
@@ -95,7 +101,7 @@ img {
   color: #fff;
   font-family: monospace;
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid var(--accent-text);
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .15em;
@@ -111,7 +117,7 @@ img {
 /* the cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange }
+  50% { border-color: var(--accent-text) }
 }
 .tip-button {
   height: 89px;
@@ -156,6 +162,18 @@ cursor: pointer;
   height: 100px;
   margin: 0 auto;
   text-align: center;
+}
+
+#metamask-animation svg {
+  width: 150px;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #metamask-animation svg {
+    width: 50px;
+    height: auto;
+  }  
 }
 
 /* media queries */

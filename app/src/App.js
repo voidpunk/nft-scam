@@ -20,6 +20,15 @@ export const StyledButton = styled.button`
     rgba(0,212,255,1) 52%,
     rgba(137,8,71,1) 88%
   );
+  background: rgb(34,38,42);
+  background: linear-gradient(
+    160deg,
+    rgba(34,38,42,1) 0%,
+    rgba(64,69,74,1) 45%,
+    rgba(54,186,144,1) 61%,
+    rgba(52,180,140,1) 72%,
+    rgba(16,56,43,1) 100%
+  );
   padding: 10px;
   font-weight: bold;
   color: white;
@@ -41,6 +50,16 @@ export const StyledButton = styled.button`
       rgba(9,9,121,1) 18%,
       rgba(137,8,71,1) 52%,
       rgba(0,212,255,1) 88%
+    );
+  }
+  :hover {
+    background: linear-gradient(
+    340deg,
+    rgba(34,38,42,1) 0%,
+    rgba(64,69,74,1) 45%,
+    rgba(54,186,144,1) 61%,
+    rgba(52,180,140,1) 72%,
+    rgba(16,56,43,1) 100%
     );
   }
 `;
@@ -229,6 +248,8 @@ function App() {
                 >
                   Connect to the {CONFIG.NETWORK.NAME} network
                 </s.TextDescription>
+                <s.SpacerSmall />
+                <div id={"metamask-animation"}></div>
                 <s.SpacerSmall />
                 <StyledButton
                   onClick={(e) => {

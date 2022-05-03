@@ -1,9 +1,10 @@
 /* general styling */
 body {
-  background-color: hsl(180, 1%, 20%);
+  /* background-color: hsl(180, 1%, 20%); */
+  background-color: var(--primary);
 }
 p, h1, h2, h3, h4, h5 {
-  color: rgba(255, 255, 255, 0.89);
+  color: var(--primary-text);
 }
 p {
   text-align: justify;
@@ -15,14 +16,25 @@ p {
 h1 {
   font-size: 4vh;
   font-weight: bold;
-  color: #fff;
+  color: var(--primary-text);
   text-shadow: 0 0 10px #000;
 }
 h2 {
   font-size: 3vh;
   font-weight: bold;
-  color: #fff;
+  color: var(--primary-text);
   text-shadow: 0 0 10px #000;
+}
+
+nav {
+  background-color: var(--secondary);
+  color: var(--primary-text);
+}
+
+#banner {
+  border-radius: 0% 50% 0% 50%;
+  /* border-radius: 10% 10% 10% 10%; */
+  box-shadow: -10px 10px 10px 5px;
 }
 
 /* classes */
@@ -77,6 +89,10 @@ img {
   cursor: pointer;
   outline: inherit;
 }
+.shy-button:hover {
+  color: #36ba90;
+}
+
 .logo-reductor {
   max-width: 300px;
   min-width: 150px;
@@ -85,7 +101,7 @@ img {
   color: #fff;
   font-family: monospace;
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid var(--accent-text);
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .15em;
@@ -101,7 +117,7 @@ img {
 /* the cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange }
+  50% { border-color: var(--accent-text) }
 }
 .tip-button {
   height: 89px;
@@ -146,6 +162,18 @@ cursor: pointer;
   height: 100px;
   margin: 0 auto;
   text-align: center;
+}
+
+#metamask-animation svg {
+  width: 150px;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #metamask-animation svg {
+    width: 50px;
+    height: auto;
+  }  
 }
 
 /* media queries */
